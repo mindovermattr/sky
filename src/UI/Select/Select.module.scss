@@ -1,0 +1,31 @@
+.select {
+  padding: 10px 75px 10px 15px;
+  appearance: none;
+  border-radius: 20px;
+  border: 1px solid rgb(196, 196, 196);
+  cursor: pointer;
+
+  font-family: "Montserrat";
+  font-weight: 400;
+
+  &:focus {
+    outline: none;
+  }
+
+  &__wrapper {
+    position: relative;
+    text-align: right;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      border: 7px solid transparent;
+      border-top: 7px solid black;
+      top: 40%;
+      right: 15px;
+
+      pointer-events: none;
+    }
+  }
+}

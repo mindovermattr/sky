@@ -1,0 +1,15 @@
+.layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .layout {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .layout {
+    max-width: 100%;
+  }
+}

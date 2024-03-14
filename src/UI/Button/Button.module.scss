@@ -1,0 +1,19 @@
+.button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  font-family: "Montserrat";
+
+  &--contained {
+    border-radius: 50px;
+    background-color: black;
+    color: #ffffff;
+  }
+  &--outlined {
+    border-radius: 50px;
+    border: 1px solid black;
+  }
+  &--text {
+    text-decoration: underline;
+  }
+}

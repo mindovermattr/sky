@@ -1,0 +1,21 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 32px 37px;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog {
+    grid-template-columns: 80%;
+    justify-content: center;
+  }
+}

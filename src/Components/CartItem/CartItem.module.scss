@@ -1,0 +1,25 @@
+.cart {
+  &__item {
+    display: grid;
+    grid-template-columns: 207px 276px minmax(40px, 306px);
+  }
+  &__line {
+    border: 0.5px solid #dddddd;
+    margin-bottom: 32px;
+    grid-column: 1/4;
+  }
+  &__quantity {
+    justify-self: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart {
+    &__item {
+      display: grid;
+      grid-template-columns: 250px minmax(40px, 306px);
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+}
