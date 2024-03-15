@@ -11,7 +11,7 @@ const CartItem = (props: ICartItemProps) => {
 
   return (
     <div className={styles["cart__item"]}>
-      <div className={styles["cart__line"]}></div>
+      <div className={styles["cart__line"]} />
       <CartItemInfo {...props} />
       <div className={styles["cart__quantity"]}>
         <Counter

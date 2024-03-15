@@ -24,7 +24,7 @@ const Header = () => {
       <nav className={styles["header__nav"]}>
         <ul className={styles["header__list"]}>
           <li className={styles["list__item"]}>
-            <Link to="/">Каталог</Link>
+            <Link to="/sky">Каталог</Link>
           </li>
           <li
             onMouseEnter={onMouseEnterHandler}
@@ -32,7 +32,7 @@ const Header = () => {
             onClick={() => setIsVisible(false)}
             className={styles["list__item"]}
           >
-            <Link to="cart">Корзина</Link>
+            <Link to="/sky/cart">Корзина</Link>
             <div
               className={`${styles["list__cart"]} ${
                 isVisible && cart.length ? styles["list__cart--active"] : ""

@@ -17,29 +17,33 @@ const Cart = () => {
 
   return (
     <div className={styles["cart"]}>
-      <div className={styles["cart__menu"]}>
-        <div className={styles["cart__header"]}>
-          <p>Товар</p>
-          <p>К-во</p>
+      {cart.length === 0 ? (
+        <div className={styles["cart__empty"]}>Корзина пуста</div>
+      ) : (
+        <div className={styles["cart__menu"]}>
+          <div className={styles["cart__header"]}>
+            <p>Товар</p>
+            <p>К-во</p>
+          </div>
+          <div className={styles["cart__items"]}>
+            {cart.map((cartItem) => (
+              <CartItem {...cartItem} key={cartItem.id} />
+            ))}
+          </div>
+          <div className={styles["cart__controls"]}>
+            <Button
+              onClick={clearCartHandler}
+              className={styles["cart__button"]}
+              variant="outlined"
+            >
+              Очистить корзину
+            </Button>
+            <Button className={styles["cart__button"]} variant="contained">
+              Продолжить покупку
+            </Button>
+          </div>
         </div>
-        <div className={styles["cart__items"]}>
-          {cart.map((cartItem) => (
-            <CartItem {...cartItem} key={cartItem.id} />
-          ))}
-        </div>
-        <div className={styles["cart__controls"]}>
-          <Button
-            onClick={clearCartHandler}
-            className={styles["cart__button"]}
-            variant="outlined"
-          >
-            Очистить корзину
-          </Button>
-          <Button className={styles["cart__button"]} variant="contained">
-            Продолжить покупку
-          </Button>
-        </div>
-      </div>
+      )}
       <form className={styles["cart__form"]}>
         <h3 className={styles["form__title"]}>Оформление заказа</h3>
         <fieldset className={styles["form__wrapper"]}>

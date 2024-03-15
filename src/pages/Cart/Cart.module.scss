@@ -4,6 +4,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+  &__empty {
+    font-size: 24px;
+    font-weight: 500;
+  }
   &__menu {
     flex-basis: 65%;
   }

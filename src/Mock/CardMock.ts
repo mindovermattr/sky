@@ -1,4 +1,10 @@
 import { ICatalogItem } from "../types/ICatalogItem";
+import Tatran from "../assets/images/CatalogCardsImages/catalog-image-TATRAN.webp";
+import LUNA from "../assets/images/CatalogCardsImages/catalog-image-LUNA.webp";
+import MENU from "../assets/images/CatalogCardsImages/catalog-image-MENU.webp";
+import NASTAN from "../assets/images/CatalogCardsImages/catalog-image-NASTAN.webp";
+import ASKETA from "../assets/images/CatalogCardsImages/catalog-image-ASKETA.webp";
+import VILORA from "../assets/images/CatalogCardsImages/catalog-image-VILORA.webp";
 
 const MOCK_DATA: ICatalogItem[] = [
   {
@@ -7,7 +13,7 @@ const MOCK_DATA: ICatalogItem[] = [
     description:
       "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
     price: 120000,
-    image: "/src/assets/images/CatalogCardsImages/catalog-image-TATRAN.webp",
+    image: Tatran,
     quantity: 0,
   },
   {
@@ -16,7 +22,7 @@ const MOCK_DATA: ICatalogItem[] = [
     description:
       "Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань.",
     price: 21000,
-    image: "/src/assets/images/CatalogCardsImages/catalog-image-VILORA.webp",
+    image: VILORA,
     quantity: 0,
   },
   {
@@ -25,7 +31,7 @@ const MOCK_DATA: ICatalogItem[] = [
     description:
       "Европейский дуб - отличается особой прочностью и стабильностью.",
     price: 34000,
-    image: "/src/assets/images/CatalogCardsImages/catalog-image-MENU.webp",
+    image: MENU,
     quantity: 0,
   },
   {
@@ -34,7 +40,7 @@ const MOCK_DATA: ICatalogItem[] = [
     description:
       "Благодаря защелкивающемуся механизму диван легко раскладывается в комфортную кровать",
     price: 68000,
-    image: "/src/assets/images/CatalogCardsImages/catalog-image-ASKETA.webp",
+    image: ASKETA,
     quantity: 0,
   },
   {
@@ -43,7 +49,7 @@ const MOCK_DATA: ICatalogItem[] = [
     description:
       "Прекрасно переносит солнечные лучи, перепады влажности и любые осадки",
     price: 40000,
-    image: "/src/assets/images/CatalogCardsImages/catalog-image-LUNA.webp",
+    image: LUNA,
     quantity: 0,
   },
   {
@@ -52,7 +58,7 @@ const MOCK_DATA: ICatalogItem[] = [
     description:
       "Мебель может быть оснащена разнообразными системами подсветки",
     price: 80000,
-    image: "/src/assets/images/CatalogCardsImages/catalog-image-NASTAN.webp",
+    image: NASTAN,
     quantity: 0,
   },
 ];
