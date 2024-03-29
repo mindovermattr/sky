@@ -3,6 +3,8 @@ import styles from "./Header.module.scss";
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import CartItemInfo from "../CartItemInfo/CartItemInfo";
+import CatalogIconMobile from "../../assets/Icons/header-catalog-icon-mobile.svg";
+import CartIconMobile from "../../assets/Icons/header-cart-icon-mobile.svg";
 
 const Header = () => {
   const { cart } = useContext(CartContext);
@@ -26,7 +28,16 @@ const Header = () => {
       <nav className={styles["header__nav"]}>
         <ul className={styles["header__list"]}>
           <li className={styles["list__item"]}>
-            <Link to="/sky">Каталог</Link>
+            <Link to="/sky">
+              <img
+                width={19}
+                height={19}
+                className={styles["list__item-icon"]}
+                src={CatalogIconMobile}
+                alt="Каталог"
+              />
+              <span className={styles["list__item-text"]}>Каталог</span>
+            </Link>
           </li>
           <li
             onMouseEnter={onMouseEnterHandler}
@@ -34,7 +45,16 @@ const Header = () => {
             onClick={() => setIsVisible(false)}
             className={styles["list__item"]}
           >
-            <Link to="/sky/cart">Корзина</Link>
+            <Link to="/sky/cart">
+              <img
+                width={25}
+                height={25}
+                className={styles["list__item-icon"]}
+                src={CartIconMobile}
+                alt="Корзина"
+              />
+              <span className={styles["list__item-text"]}>Корзина</span>
+            </Link>
             <div
               className={`${styles["list__cart"]} ${
                 isVisible && cart.length ? styles["list__cart--active"] : ""

@@ -8,10 +8,10 @@ import "./index.scss";
 
 const router = createBrowserRouter([
   {
-    path: "/sky/",
+    path: "/sky",
     element: <Layout />,
     children: [
-      { path: "/sky/", element: <App /> },
+      { path: "/sky", element: <App /> },
       { path: "/sky/cart", element: <Cart /> },
     ],
   },

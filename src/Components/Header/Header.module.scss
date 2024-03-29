@@ -21,6 +21,10 @@
 .list {
   &__item {
     position: relative;
+
+    &-icon {
+      display: none;
+    }
   }
   &__cart {
     display: none;
@@ -55,6 +59,19 @@
     padding: 50px 0 17px 0;
     &__title {
       font-size: 18px;
+    }
+  }
+  .list {
+    &__item {
+      &-icon {
+        display: block;
+      }
+      &-text {
+        display: none;
+      }
+      &:first-child {
+        align-self: center;
+      }
     }
   }
   .list__cart--active {

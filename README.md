@@ -1,30 +1,12 @@
-# React + TypeScript + Vite
+# Тестовое задание SkyPro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Используемый стек: React, TypeScript, SCSS, Vite
+Для реализации SPA также была установлена библиотека React-router-dom (v6).
 
-Currently, two official plugins are available:
+Ссылка на gh-pages: mindovermattr.github.io/sky
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Обоснование создания товара каталога средствами react
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Для того чтобы обосновать выбор определенному способа создания товара в каталоге необходимо описать минимальный функционал приложения, связанный с товаром. У каждого товара, исходя из ТЗ, должна быть кнопка, добавляющая его в корзину. Иными словами, необходимо некоторое хранилище, которое будет аккумулировать в себе всю информацию о товаре и его количестве, а также обновлять состояние хранилища при нажатии на иконку корзины. В React существуют два хука, которые решают эту проблему: useState для обновления и хранения состояния, а также useContext для доступа к самому состоянию и его функции-сеттеру.
+Описание товара jsx-ом позволяет придерживаться принципа DRY, а также пользоваться хуками, упомянутыми ранее. Также такой способ ускоряет процесс написания кода и масштабирования приложения (такие карточки можно использовать и в других частях приложения).
+В случае использования нативного JS приходится написать большое количество Boilerplate кода, следить за добавлением/снятием слушателей события, также при таком подходе больше шансов наткнуться на баги в коде.

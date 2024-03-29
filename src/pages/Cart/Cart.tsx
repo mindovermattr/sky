@@ -43,7 +43,7 @@ const Cart = () => {
             </Button>
             <Button
               onClick={() => navigate("/sky")}
-              className={styles["cart__button"]}
+              className={`${styles["cart__button"]} ${styles["cart__button--black"]}`}
               variant="contained"
             >
               Продолжить покупку
