@@ -2,8 +2,9 @@ import { ICatalogItem } from "../../types/ICatalogItem";
 import styles from "./CatalogCard.module.scss";
 import CartIcon from "../../assets/Icons/cart-icon.svg";
 import FavoriteIcon from "../../assets/Icons/favorite-icon.svg";
-import Button from "../../UI/Button/Button";
+import Button from "../UI/Button/Button";
 import useCart from "../../hooks/useCart";
+import { useState } from "react";
 
 interface ICatalogCardProps extends ICatalogItem {}
 
@@ -22,8 +23,22 @@ const CatalogCard = ({
     description,
   });
 
+  const [isIconsVisible, setIsIconsVisible] = useState(false);
+
+  const onMouseLeaveHandler = () => {
+    setIsIconsVisible(false);
+  };
+
+  const onMouseEnterHandler = () => {
+    setIsIconsVisible(true);
+  };
+
   return (
-    <div className={styles["catalog__card"]}>
+    <div
+      onMouseLeave={onMouseLeaveHandler}
+      onMouseEnter={onMouseEnterHandler}
+      className={styles["catalog__card"]}
+    >
       <img
         className={styles["card__image"]}
         src={image}
@@ -35,12 +50,14 @@ const CatalogCard = ({
         {price.toLocaleString("ru-RU")} руб.
       </p>
 
-      <div className={styles["card__icons"]}>
-        <Button
-          onClick={() => addToCartHandler("increment")}
-          variant="default"
-          className={styles["card__button"]}
-        >
+      <div
+        className={`${styles["card__icons"]}  ${
+          isIconsVisible
+            ? styles["card__icons--visible"]
+            : styles["card__icons--hidden"]
+        }`}
+      >
+        <Button onClick={() => addToCartHandler("increment")} variant="default">
           <img src={CartIcon} alt="Иконка корзины" />
         </Button>
         <Button variant="default">

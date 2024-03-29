@@ -1,7 +1,7 @@
 import styles from "./layout.module.scss";
 import Header from "../Header/Header";
 import { Outlet } from "react-router-dom";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import { useState } from "react";
 import { ICatalogItem } from "../../types/ICatalogItem";
 

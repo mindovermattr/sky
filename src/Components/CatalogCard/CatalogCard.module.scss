@@ -29,10 +29,56 @@
 
   &__icons {
     position: absolute;
-    top: 20px;
+    display: none;
+    gap: 21px;
+    top: 10px;
     right: 10px;
+    transform: translateY(0%);
+    & > * {
+      position: relative;
+      filter: contrast(4);
+    }
+    &--visible {
+      display: flex;
+      animation: icons-animation 0.2s ease-in;
+    }
+    &--hidden {
+      animation: icons-animation-reverse 0.2s ease-in;
+    }
   }
-  &__button {
-    margin-right: 25px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    &__icons {
+      &--visible,
+      &--hidden {
+        display: flex;
+        animation: none;
+      }
+    }
+  }
+}
+
+@keyframes icons-animation {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes icons-animation-reverse {
+  from {
+    transform: translateY(0%);
+    display: flex;
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20%);
+    opacity: 0;
   }
 }

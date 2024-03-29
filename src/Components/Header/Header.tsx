@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 import { useContext, useState } from "react";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import CartItemInfo from "../CartItemInfo/CartItemInfo";
 
 const Header = () => {
@@ -20,7 +20,9 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles["header__title"]}>Интерьер.</h1>
+      <h1 className={styles["header__title"]}>
+        <Link to="/sky">Интерьер.</Link>
+      </h1>
       <nav className={styles["header__nav"]}>
         <ul className={styles["header__list"]}>
           <li className={styles["list__item"]}>

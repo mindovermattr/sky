@@ -1,9 +1,8 @@
 import { ChangeEvent, useState } from "react";
 import Catalog from "../../Components/Catalog/Catalog.tsx";
-
-import Select from "../../UI/Select/Select.tsx";
-import CatalogData from "../../Mock/CardMock.ts";
-import "./app.scss";
+import Select from "../../Components/UI/Select/Select.tsx";
+import CatalogData from "../../mock/CardMock.ts";
+import styles from "./App.module.scss";
 import { CatalogSelectOptions } from "../../types/enums/CatalogSelectOptions.ts";
 import { ICatalogItem } from "../../types/ICatalogItem.ts";
 
@@ -29,7 +28,10 @@ const App = () => {
 
   return (
     <>
-      <Select onChange={onChangeSelectHandler} className="select__wrapper">
+      <Select
+        onChange={onChangeSelectHandler}
+        className={styles["select__wrapper"]}
+      >
         <option value={CatalogSelectOptions.newer}>
           Порядок: сперва новые
         </option>

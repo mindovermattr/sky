@@ -1,8 +1,9 @@
 import { useContext } from "react";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../../context/CartContext";
 import styles from "./Cart.module.scss";
 import CartItem from "../../Components/CartItem/CartItem";
-import Button from "../../UI/Button/Button";
+import Button from "../../Components/UI/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cart, setCartFunction } = useContext(CartContext);
@@ -10,6 +11,8 @@ const Cart = () => {
     (acc, cartItem) => acc + cartItem.price * cartItem.quantity,
     0
   );
+
+  const navigate = useNavigate();
 
   const clearCartHandler = () => {
     setCartFunction([]);
@@ -38,7 +41,11 @@ const Cart = () => {
             >
               Очистить корзину
             </Button>
-            <Button className={styles["cart__button"]} variant="contained">
+            <Button
+              onClick={() => navigate("/sky")}
+              className={styles["cart__button"]}
+              variant="contained"
+            >
               Продолжить покупку
             </Button>
           </div>
@@ -74,7 +81,11 @@ const Cart = () => {
               {sum.toLocaleString()} руб.
             </span>
           </p>
-          <Button className={styles["form__button"]} variant="outlined">
+          <Button
+            type="button"
+            className={styles["form__button"]}
+            variant="outlined"
+          >
             Оформить заказ
           </Button>
         </fieldset>

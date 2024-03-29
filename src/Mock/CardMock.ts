@@ -1,19 +1,19 @@
 import { ICatalogItem } from "../types/ICatalogItem";
-import Tatran from "../assets/images/CatalogCardsImages/catalog-image-TATRAN.webp";
+import TATRAN from "../assets/images/CatalogCardsImages/catalog-image-TATRAN.webp";
 import LUNA from "../assets/images/CatalogCardsImages/catalog-image-LUNA.webp";
 import MENU from "../assets/images/CatalogCardsImages/catalog-image-MENU.webp";
 import NASTAN from "../assets/images/CatalogCardsImages/catalog-image-NASTAN.webp";
 import ASKETA from "../assets/images/CatalogCardsImages/catalog-image-ASKETA.webp";
 import VILORA from "../assets/images/CatalogCardsImages/catalog-image-VILORA.webp";
 
-const MOCK_DATA: ICatalogItem[] = [
+const mockData: ICatalogItem[] = [
   {
     id: 1,
     title: "Кровать TATRAN",
     description:
       "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
     price: 120000,
-    image: Tatran,
+    image: TATRAN,
     quantity: 0,
   },
   {
@@ -63,4 +63,4 @@ const MOCK_DATA: ICatalogItem[] = [
   },
 ];
 
-export default MOCK_DATA;
+export default mockData;

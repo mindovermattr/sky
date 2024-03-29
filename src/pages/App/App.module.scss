@@ -1,0 +1,9 @@
+.select__wrapper {
+  margin: 39px 0;
+}
+
+@media (max-width: 768px) {
+  .select__wrapper {
+    margin: 39px 10vw;
+  }
+}

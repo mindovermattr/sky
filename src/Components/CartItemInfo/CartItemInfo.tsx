@@ -1,4 +1,4 @@
-import Button from "../../UI/Button/Button";
+import Button from "../UI/Button/Button";
 import styles from "./CartItemInfo.module.scss";
 import { ICatalogItem } from "../../types/ICatalogItem";
 import useCart from "../../hooks/useCart";

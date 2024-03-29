@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartContext } from "../Context/CartContext";
+import { CartContext } from "../context/CartContext";
 import { ICatalogItem } from "../types/ICatalogItem";
 
 interface IUseCartItem extends Omit<ICatalogItem, "quantity"> {}

@@ -34,3 +34,39 @@
   font-family: "Montserrat", "Arial", sans-serif;
   overflow-y: scroll;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+input {
+  border: none;
+  background-color: inherit;
+
+  &:focus-visible {
+    outline: none;
+  }
+}

@@ -1,4 +1,4 @@
-import Counter from "../../UI/Counter/Counter";
+import Counter from "../UI/Counter/Counter";
 import { ICatalogItem } from "../../types/ICatalogItem";
 import styles from "./CartItem.module.scss";
 import useCart from "../../hooks/useCart";
